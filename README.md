@@ -33,4 +33,6 @@ GRANT WRITE ON worker TO worker_writer
 GRANT READ ON worker TO worker_reader
 ``` 
 
-
+## API
+Pomocí HTTP API je možné pracovat s InfluxDB.
+V souboru **HttpTests/samples.http** jsou příklady dotazů na API.

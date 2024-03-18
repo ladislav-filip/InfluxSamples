@@ -11,10 +11,13 @@ GET {{url}}/query?pretty=true&q=SHOW DATABASES
 
 ###
 # Zápis hodnoty do databáze. Hodnota je zapsána do databáze "worker" do tabulky "my_value" s tagem "my_tag" a hodnotou "value=20".
+# Zde jsou zápisi i z vlastní časovou značkou
 POST {{url}}/write?u={{writer}}&p={{password}}&db={{dbname}}
 Content-Type: text/plain
 
-my_value,my_tag=sample value=28
+my_value,my_tag=sample value=55 1637153727
+my_value,my_tag=sample1 value=18 1637153727
+my_other,my_tag=custom value=66,press=410 
 
 ###
 # Načtení hodnoty z databáze. Hodnota je načtena z databáze "worker" z tabulky "my_value".

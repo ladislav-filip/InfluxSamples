@@ -7,3 +7,4 @@ main.env
 .idea/
 InfluxWorker/influx-1/data/
 InfluxWorker/grafana/
+InfluxWorker/appsettings.local.json
