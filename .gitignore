@@ -3,3 +3,7 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+main.env
+.idea/
+InfluxWorker/influx-1/data/
+InfluxWorker/grafana/

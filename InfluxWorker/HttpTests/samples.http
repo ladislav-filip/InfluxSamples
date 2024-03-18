@@ -1,0 +1,21 @@
+@url=http://localhost:8068
+@dbname=worker
+@writer=worker_writer
+@reader=worker_reader
+# dummy password
+@password=123456
+
+###
+# Načtení seznamu dostupných databází. Je potřeba se, ale autentizovat.
+GET {{url}}/query?pretty=true&q=SHOW DATABASES
+
+###
+# Zápis hodnoty do databáze. Hodnota je zapsána do databáze "worker" do tabulky "my_value" s tagem "my_tag" a hodnotou "value=20".
+POST {{url}}/write?u={{writer}}&p={{password}}&db={{dbname}}
+Content-Type: text/plain
+
+my_value,my_tag=sample value=28
+
+###
+# Načtení hodnoty z databáze. Hodnota je načtena z databáze "worker" z tabulky "my_value".
+GET {{url}}/query?pretty=true&u={{reader}}&p={{password}}&db={{dbname}}&q=SELECT * FROM my_value

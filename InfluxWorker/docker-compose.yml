@@ -1,0 +1,25 @@
+﻿version: "3"
+
+services:
+  influxdb:
+    image: "influxdb:1.8.10"
+    container_name: "influxdb"
+    ports:
+      - "8068:8086"
+    env_file:
+      - './main.env'
+    volumes:
+      - ./influx-1/data:/var/lib/influxdb/
+      - ./influx-1/etc/:/etc/influxdb/
+ 
+  grafana-influx:
+    container_name: "grafana-influx"
+    image: grafana/grafana:8.5.27
+    ports:
+      - "3001:3000"
+    env_file:
+      - 'main.env'
+    volumes:
+      - ./grafana/lib/:/var/lib/grafana/
+      - ./grafana/log/:/var/log/grafana/
+      #- ./etc/grafana.ini:/etc/grafana/grafana.ini    
