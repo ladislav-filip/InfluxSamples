@@ -6,5 +6,7 @@ riderModule.iml
 main.env
 .idea/
 InfluxWorker/influx-1/data/
+InfluxWorker/influx-2/data/
 InfluxWorker/grafana/
+InfluxWorker/grafana-10/
 InfluxWorker/appsettings.local.json

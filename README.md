@@ -1,11 +1,15 @@
 ﻿# Influx .NET samples
 Ukázky práce s InfluxDB pomocí .NET
 
+V ukázkách je použit InfluxDB 1 a InfluxDB 2.
+
 ## Docker
 Konfigurace kontejneru InfluxDB je v docker-compose.yml.
 Pro spuštění docker-compose je potřeba přejmenovat soubor **main.env.dist** na **main.env** a nastavit v něm proměnné.
 
 Ověření dosutpnosti pomocí healthcheck: http://localhost:8068/health
+
+# InfluxDB 1
 
 ### Konfigurace
 Základní konfigurace je pomocí ENV proměnných v souboru **main.env**.

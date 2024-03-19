@@ -1,0 +1,12 @@
+# InfluxDB v2
+
+@url=http://localhost:8069
+@token=Gp0LiImQKZjRo0wkmpnQxBqyMsQ4BAMEIRWQj5CHiM608txB3xLs77qilbnsNHxl3EL6vgg58739KgCaYVpGKQ==
+@bucket=playground
+@org=fullcom
+
+###
+POST {{url}}/api/v2/write?org={{org}}&bucket={{bucket}}&precision=s
+Authorization: Token {{token}}
+
+my_measurement,my_tag=sample value=97
