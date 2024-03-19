@@ -12,16 +12,16 @@ services:
       - ./influx-1/data:/var/lib/influxdb/
       - ./influx-1/etc/:/etc/influxdb/
  
-  influxdb-2:
-    image: "influxdb:2.7.5-alpine"
-    container_name: "influxdb-2"
-    ports:
-      - "8069:8086"
-    env_file:
-      - './main.env'
-    volumes:
-      - ./influx-2/data:/var/lib/influxdb2/
-      - ./influx-2/etc/:/etc/influxdb2/        
+#  influxdb-2:
+#    image: "influxdb:2.7.5-alpine"
+#    container_name: "influxdb-2"
+#    ports:
+#      - "8069:8086"
+#    env_file:
+#      - './main.env'
+#    volumes:
+#      - ./influx-2/data:/var/lib/influxdb2/
+#      - ./influx-2/etc/:/etc/influxdb2/        
  
   grafana-influx:
     container_name: "grafana-influx"
@@ -35,14 +35,14 @@ services:
       - ./grafana/log/:/var/log/grafana/
       #- ./etc/grafana.ini:/etc/grafana/grafana.ini    
 
-  grafana-10-influx:
-    container_name: "grafana-10-influx"
-    image: grafana/grafana:10.0.12
-    ports:
-      - "3002:3000"
-    env_file:
-      - 'main.env'
-    volumes:
-      - ./grafana-10/lib/:/var/lib/grafana/
-      - ./grafana-10/log/:/var/log/grafana/
-      #- ./etc/grafana.ini:/etc/grafana/grafana.ini        
+#  grafana-10-influx:
+#    container_name: "grafana-10-influx"
+#    image: grafana/grafana:10.0.12
+#    ports:
+#      - "3002:3000"
+#    env_file:
+#      - 'main.env'
+#    volumes:
+#      - ./grafana-10/lib/:/var/lib/grafana/
+#      - ./grafana-10/log/:/var/log/grafana/
+#      #- ./etc/grafana.ini:/etc/grafana/grafana.ini        

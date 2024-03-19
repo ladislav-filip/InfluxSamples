@@ -1,5 +1,4 @@
-# InfluxDB v1
-
+@url=http://localhost:8068
 @dbname=worker
 @writer=worker_writer
 @reader=worker_reader
